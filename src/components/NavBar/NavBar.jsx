@@ -8,15 +8,52 @@ export default function NavBar({ user, setUser }) {
     setUser(null);
   } 
   return (
-    <nav className="navbar bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <span className="navbar-brand mb-0 h1">Welcome, {user.name}</span>
-        <Link className="nav-link" to="/orders">Order History</Link>
-        &nbsp; | &nbsp;
-        <Link className="nav-link" to="/orders/new">New Order</Link>
-        &nbsp; | &nbsp;
-        {/* 'Log Out' could be a Link or a button depending on desired look. */}
-        <Link className="nav-link" to="" onClick={handleLogOut}>Log Out</Link>
+        <Link to="/" className="navbar-brand">
+          <img src="./favicon.ico" alt="Logo" width="24" height="24" className="d-inline-block align-text-top" />
+          &nbsp;
+          Velvet Vista
+        </Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link to="/" className="nav-link">Home</Link>
+            </li>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Clothing
+              </a>
+              <ul className="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Link 1</a></li>
+                <li><a class="dropdown-item" href="#">Link 2</a></li>
+                <li><a class="dropdown-item" href="#">Link 3</a></li>
+              </ul>
+            </li>
+            { (user) ? 
+              <>
+                <li className="nav-item">
+                  <Link to="/orders" className="nav-link">Order History</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/orders/new" className="nav-link">
+                    Cart
+                  </Link>
+                </li>
+                <li className="nav-item d-flex">
+                  <Link to="/" className="nav-link" onClick={handleLogOut}>Log Out</Link>
+                </li>
+              </>
+              :
+              <li className="nav-item">
+                <Link to="/login" className="nav-link">Login</Link>
+              </li>
+            }
+          </ul>
+        </div>
       </div>
     </nav>
   )
