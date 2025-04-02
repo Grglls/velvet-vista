@@ -26,7 +26,7 @@ export default function App() {
     <main className="">
       <NavBar user={user} setUser={setUser} />
       <Routes>
-        <Route path="/" element={ <HomePage /> } />
+        <Route path="/" element={ <HomePage clothesItems={clothesItems} categories={categoriesRef.current} /> } />
         <Route path="/orders" element={ <OrderHistoryPage /> } />
         <Route path="/orders/new" element={ <NewOrderPage /> } />
         <Route path="/login" element={<AuthPage setUser={setUser} />} />
