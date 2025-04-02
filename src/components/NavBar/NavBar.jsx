@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 import * as usersService from "../../utilities/users-service"
 
-export default function NavBar({ user, setUser }) {
+export default function NavBar({ user, setUser, categories }) {
   function handleLogOut() {
     // Delegate to the users-service:
     usersService.logOut();
     setUser(null);
-  } 
+  }
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -28,9 +28,11 @@ export default function NavBar({ user, setUser }) {
                 Clothing
               </a>
               <ul className="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                <li><a class="dropdown-item" href="#">Link 3</a></li>
+                {categories.map(cat => 
+                  <li>
+                    <Link to={`/products/${cat}`} className="dropdown-item" >{cat}</Link>
+                  </li>
+                )}
               </ul>
             </li>
             { (user) ? 
