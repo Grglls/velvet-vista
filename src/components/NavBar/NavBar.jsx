@@ -28,8 +28,8 @@ export default function NavBar({ user, setUser, categories }) {
                 Clothing
               </a>
               <ul className="dropdown-menu">
-                {categories.map(cat => 
-                  <li>
+                {categories.map((cat, index) => 
+                  <li key={index}>
                     <Link to={`/products/${cat}`} className="dropdown-item" >{cat}</Link>
                   </li>
                 )}
