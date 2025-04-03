@@ -1,4 +1,4 @@
-export default function CategoryPreviewCard({ item }) {
+export default function ClothingItemCard({ item }) {
   return (
     <div className="p-1">
       <div className="card p-0">
