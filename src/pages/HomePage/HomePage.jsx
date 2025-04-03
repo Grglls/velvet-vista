@@ -11,12 +11,9 @@ export default function HomePage({ clothesItems, categories }) {
   );
   
   return (
-    <div 
-      className="container-fluid"
-      style={{"max-width": "1000px"}}
-    >
+    <>
       <h1>Home</h1>
       {clothesCats}
-    </div>
+    </>
   );
 }
