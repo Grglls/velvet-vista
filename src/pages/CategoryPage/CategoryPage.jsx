@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import CategoryPreviewCard from "../../components/ClothingItemCard/ClothingItemCard";
+import ClothingItemCard from "../../components/ClothingItemCard/ClothingItemCard";
 
 export default function CategoryPage({ clothesItems }) {
   const category = useParams().categoryId;
@@ -9,7 +9,7 @@ export default function CategoryPage({ clothesItems }) {
     <>
       <h1>{category}</h1>
       <div className="row row-cols-3 p-2">
-        { categoryItems.map((item, index) => <CategoryPreviewCard item={item} key={index} /> ) }
+        { categoryItems.map((item, index) => <ClothingItemCard item={item} key={index} /> ) }
       </div>
     </>
   )
