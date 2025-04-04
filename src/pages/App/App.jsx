@@ -26,7 +26,7 @@ export default function App() {
   return (
     <main className="">
       <NavBar user={user} setUser={setUser} categories={categoriesRef.current} />
-      <div className="container-fluid mt-2" style={{"max-width": "1000px"}}>
+      <div className="container-fluid mt-2" style={{"maxWidth": "1000px"}}>
         <Routes>
           <Route path="/" element={ <HomePage clothesItems={clothesItems} categories={categoriesRef.current} /> } />
           <Route path="/orders" element={ <OrderHistoryPage /> } />
