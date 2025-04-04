@@ -10,6 +10,7 @@ export default function ClothingItemCard({ item }) {
       >
         <img src={item.image} className="card-img-top" alt="..." />
         <div className="card-body p-1">
+          <p class="card-text mb-0"><small class="text-body-secondary">${item.price.toFixed(2)}</small></p>
           <p className="card-text">{item.name}</p>
         </div>
       </Link>
