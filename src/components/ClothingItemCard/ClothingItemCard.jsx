@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function ClothingItemCard({ item }) {
-  console.log(item);
   return (
     <div className="p-1">
       <Link
