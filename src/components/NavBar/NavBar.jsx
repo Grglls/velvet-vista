@@ -11,7 +11,7 @@ export default function NavBar({ user, setUser, categories }) {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
-          <img src="./favicon.ico" alt="Logo" width="24" height="24" className="d-inline-block align-text-top" />
+          <img src="/favicon.ico" alt="Logo" width="24" height="24" className="d-inline-block align-text-top" />
           &nbsp;
           Velvet Vista
         </Link>
