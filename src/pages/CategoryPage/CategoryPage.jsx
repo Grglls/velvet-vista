@@ -8,7 +8,7 @@ export default function CategoryPage({ clothesItems }) {
   return (
     <>
       <h1>{category}</h1>
-      <div className="row row-cols-3 p-2">
+      <div className="row row-cols-2 row-cols-sm-3 p-2">
         { categoryItems.map((item, index) => <ClothingItemCard item={item} key={index} /> ) }
       </div>
     </>
