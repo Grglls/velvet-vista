@@ -6,8 +6,9 @@ import HomePage from '../HomePage/HomePage'
 import AuthPage from '../AuthPage/AuthPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
-import * as itemsAPI from '../../utilities/items-api';
 import CategoryPage from '../CategoryPage/CategoryPage';
+import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
+import * as itemsAPI from '../../utilities/items-api';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/orders/new" element={ <NewOrderPage /> } />
           <Route path="/login" element={<AuthPage setUser={setUser} />} />
           <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />
+          <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} />} />
           {/* redirect to "/" if path in address bar hasn't matched a <Route> above */}
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
