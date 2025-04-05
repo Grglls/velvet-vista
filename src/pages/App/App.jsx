@@ -4,7 +4,7 @@ import { getUser } from '../../utilities/users-service';
 import * as itemsAPI from '../../utilities/items-api';
 import * as ordersAPI from '../../utilities/orders-api';
 import NavBar from '../../components/NavBar/NavBar';
-import HomePage from '../HomePage/HomePage'
+import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
 import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <main className="">
-      <NavBar user={user} setUser={setUser} categories={categoriesRef.current} />
+      <NavBar user={user} setUser={setUser} categories={categoriesRef.current} cart={cart} />
       <div className="container-fluid mt-2" style={{"maxWidth": "1000px"}}>
         <Routes>
           <Route path="/" element={ <HomePage clothesItems={clothesItems} categories={categoriesRef.current} /> } />

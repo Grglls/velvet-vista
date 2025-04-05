@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import * as usersService from "../../utilities/users-service"
 
-export default function NavBar({ user, setUser, categories }) {
+export default function NavBar({ user, setUser, categories, cart }) {
   function handleLogOut() {
     // Delegate to the users-service:
     usersService.logOut();
@@ -43,6 +43,7 @@ export default function NavBar({ user, setUser, categories }) {
                 <li className="nav-item">
                   <Link to="/orders/new" className="nav-link">
                     Cart
+                    <span> ({cart.totalQuantity})</span>
                   </Link>
                 </li>
                 <li className="nav-item d-flex">
