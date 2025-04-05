@@ -75,5 +75,6 @@ class SignUpForm extends Component {
   }  
 }
 
-export default withRouter(SignUpForm);
+const SignUpFormWithRouter = withRouter(SignUpForm);
+export default SignUpFormWithRouter;
 // Note: The withRouter HOC is used to inject the navigate function into the component's props.
