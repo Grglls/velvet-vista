@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
+import * as itemsAPI from '../../utilities/items-api';
+import * as ordersAPI from '../../utilities/orders-api';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage'
 import AuthPage from '../AuthPage/AuthPage';
@@ -8,12 +10,12 @@ import NewOrderPage from '../NewOrderPage/NewOrderPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import CategoryPage from '../CategoryPage/CategoryPage';
 import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
-import * as itemsAPI from '../../utilities/items-api';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [clothesItems, setClothesItems] = useState([]);
   const categoriesRef = useRef([]);
+  const [cart, setCart] = useState(ordersAPI.getCart());
 
   useEffect(function() {
     async function getItems() {
@@ -22,6 +24,12 @@ export default function App() {
       setClothesItems(items);
     }
     getItems();
+
+    async function getCart() {
+      const cart = await ordersAPI.getCart();
+      setCart(cart);
+    }
+    getCart();
   }, []);
 
   return (
