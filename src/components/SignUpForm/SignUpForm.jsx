@@ -2,8 +2,10 @@
 // However, React is moving towards the newer function based components these days.
 import { Component } from "react";
 import { signUp } from "../../utilities/users-service";
+// Import withRouter Higher Order Component (HOC) to get access to the navigate function:
+import { withRouter } from "../../utilities/withRouter";
 
-export default class SignUpForm extends Component {
+class SignUpForm extends Component {
   state = {
     name: '',
     email: '',
@@ -12,13 +14,14 @@ export default class SignUpForm extends Component {
     error: ''
   };
 
+  
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
       error: ''
     });
   };
-
+  
   handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -27,12 +30,15 @@ export default class SignUpForm extends Component {
       const formData = {...this.state};
       delete formData.confirm;
       delete formData.error;
-
+      
       // The promise returned by the signUp service method
       // will resolve to the user object included in the
       // payload of the JWT
       const user = await signUp(formData);
       this.props.setUser(user);
+
+      // Redirect to the home page after successful sign-up:
+      this.props.navigate('/');
     } catch {
       this.setState({ error: 'Sign-up failed - try again.' });
     }
@@ -68,3 +74,6 @@ export default class SignUpForm extends Component {
     );
   }  
 }
+
+export default withRouter(SignUpForm);
+// Note: The withRouter HOC is used to inject the navigate function into the component's props.
