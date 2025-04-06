@@ -43,7 +43,8 @@ export default function NavBar({ user, setUser, categories, cart }) {
                 <li className="nav-item">
                   <Link to="/orders/new" className="nav-link">
                     Cart
-                    { cart && <span> ({cart.totalQuantity})</span>}
+                    &nbsp;
+                    { cart && <span className="badge text-bg-secondary"> {cart.totalQuantity}</span>}
                   </Link>
                 </li>
                 <li className="nav-item d-flex">
