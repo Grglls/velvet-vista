@@ -15,7 +15,7 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   const [clothesItems, setClothesItems] = useState([]);
   const categoriesRef = useRef([]);
-  const [cart, setCart] = useState(ordersAPI.getCart());
+  const [cart, setCart] = useState(null);
 
   useEffect(function() {
     async function getItems() {
@@ -24,13 +24,16 @@ export default function App() {
       setClothesItems(items);
     }
     getItems();
+  }, []);
 
+  useEffect(function() {
+    if (!user) return; // Exit the effect if no user is logged in.
     async function getCart() {
       const cart = await ordersAPI.getCart();
       setCart(cart);
     }
     getCart();
-  }, []);
+  }, [user]);
 
   return (
     <main className="">
