@@ -8,7 +8,7 @@ export default function NavBar({ user, setUser, categories, cart }) {
     setUser(null);
   }
   return (
-    <nav className="navbar navbar-expand-sm bg-body-tertiary">
+    <nav className="navbar navbar-expand-md bg-body-tertiary">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
           <img src="/favicon.ico" alt="Logo" width="24" height="24" className="d-inline-block align-text-top" />
@@ -19,7 +19,7 @@ export default function NavBar({ user, setUser, categories, cart }) {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-sm-0">
+          <ul className="navbar-nav me-auto mb-2 mb-md-0">
             <li className="nav-item">
               <Link to="/" className="nav-link">Home</Link>
             </li>
