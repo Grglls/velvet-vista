@@ -6,3 +6,8 @@ const BASE_URL = '/api/orders';
 export async function getCart() {
   return sendRequest(`${BASE_URL}/cart`);
 }
+
+// Add an item to the cart:
+export async function addItemToCart(itemId, size, quantity) {
+  return sendRequest(`${BASE_URL}/cart/items`, 'POST', { itemId, size, quantity });
+}
