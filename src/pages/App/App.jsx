@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import * as itemsAPI from '../../utilities/items-api';
 import * as ordersAPI from '../../utilities/orders-api';
@@ -16,6 +16,7 @@ export default function App() {
   const [clothesItems, setClothesItems] = useState([]);
   const categoriesRef = useRef([]);
   const [cart, setCart] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(function() {
     async function getItems() {
@@ -35,6 +36,17 @@ export default function App() {
     getCart();
   }, [user]);
 
+  // ------------------- Event Handlers -------------------
+  async function handleAddToCart(itemId, size, quantity) {
+    // If user is not logged in, redirect to login page:
+    if (!user) {
+      navigate('/login');
+      return;
+    }
+    const updatedCart = await ordersAPI.addItemToCart(itemId, size, quantity);
+    setCart(updatedCart);
+  }
+
   return (
     <main className="">
       <NavBar user={user} setUser={setUser} categories={categoriesRef.current} cart={cart} />
@@ -45,7 +57,7 @@ export default function App() {
           <Route path="/orders/new" element={ <NewOrderPage /> } />
           <Route path="/login" element={<AuthPage setUser={setUser} />} />
           <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />
-          <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} />} />
+          <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} handleAddToCart={handleAddToCart} />} />
           {/* redirect to "/" if path in address bar hasn't matched a <Route> above */}
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
