@@ -7,5 +7,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn.cjs');
 
 // GET /api/orders/cart
 router.get('/cart', ensureLoggedIn, ordersCtrl.cart);
+// POST /api/orders/cart/items
+router.post('/cart/items', ensureLoggedIn, ordersCtrl.addToCart);
 
 module.exports = router;
