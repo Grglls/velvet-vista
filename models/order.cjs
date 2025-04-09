@@ -53,4 +53,24 @@ orderSchema.statics.getCart = async function(userId) {
   )
 };
 
+// Instance method for adding an item to the cart:
+orderSchema.methods.addToCart = async function(itemId, size, quantity) {
+  // 'this' is bound to the cart instance, make a named const for clarity:
+  const cart = this;
+  // Check if the item (of that size) is already in the cart:
+  const lineItem = cart.lineItems.find(lineItem => lineItem.item._id.equals(itemId) && lineItem.size === size);
+  if (lineItem) {
+    // If it is, update the quantity:
+    lineItem.quantity += quantity;
+  } else {
+    // Get the item from the database:
+    const Item = mongoose.model('Item');
+    const item = await Item.findById(itemId);
+    // Add the new line item:
+    cart.lineItems.push({ item, size, quantity });
+  }
+  // Return the save() method's promise:
+  return cart.save();
+};
+
 module.exports = mongoose.model('Order', orderSchema);
