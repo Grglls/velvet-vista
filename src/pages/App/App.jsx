@@ -51,6 +51,9 @@ export default function App() {
   async function handleCheckout(address) {
     await ordersAPI.checkout(address);
     navigate('/orders');
+    // After checkout, reset to an empty cart:
+    const cart = await ordersAPI.getCart();
+    setCart(cart);
   }
 
   return (
