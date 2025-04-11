@@ -11,3 +11,8 @@ export async function getCart() {
 export async function addItemToCart(itemId, size, quantity) {
   return sendRequest(`${BASE_URL}/cart/items`, 'POST', { itemId, size, quantity });
 }
+
+// Checkout the cart (i.e. update the unpaid order's isPaid property to true):
+export async function checkout(address) {
+  return sendRequest(`${BASE_URL}/cart/checkout`, 'POST', { address });
+}
