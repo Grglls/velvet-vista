@@ -48,7 +48,7 @@ export default function App() {
   }
 
   return (
-    <main className="">
+    <>
       <NavBar user={user} setUser={setUser} categories={categoriesRef.current} cart={cart} />
       <div className="container-fluid mt-2" style={{"maxWidth": "1000px"}}>
         <Routes>
@@ -62,6 +62,6 @@ export default function App() {
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       </div>
-    </main>
+    </>
   )
 }
