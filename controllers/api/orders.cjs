@@ -4,6 +4,7 @@ const Order = require('../../models/order.cjs');
 module.exports = {
   cart,
   addToCart,
+  checkout,
 };
   
 async function cart(req, res) {
@@ -14,5 +15,13 @@ async function cart(req, res) {
 async function addToCart(req, res) {
   const cart = await Order.getCart(req.user._id);
   await cart.addToCart(req.body.itemId, req.body.size, req.body.quantity);
+  res.json(cart);
+}
+
+async function checkout(req, res) {
+  const cart = await Order.getCart(req.user._id);
+  cart.address = req.body.address;
+  cart.isPaid = true;
+  await cart.save();
   res.json(cart);
 }
