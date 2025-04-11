@@ -7,11 +7,17 @@ export default function CartPage({ cart }) {
   
   return (
     <>
-      <h1>Items in cart: {cart.lineItems.reduce((acc, curr) => acc + curr.quantity, 0)}</h1>
-      <OrderSummary order={cart} />
-      <div className="d-flex justify-content-center">
-        <Link to={'/orders/checkout'} className="btn btn-primary mb-3">Proceed to Checkout</Link>
-      </div>
+      { cart.lineItems.length === 0 ? 
+        <h1>The cart is empty.</h1>
+      :
+      <>
+        <h1>Items in cart: {cart.lineItems.reduce((acc, curr) => acc + curr.quantity, 0)}</h1>
+        <OrderSummary order={cart} />
+        <div className="d-flex justify-content-center">
+          <Link to={'/orders/checkout'} className="btn btn-primary mb-3">Proceed to Checkout</Link>
+        </div>
+      </>
+      }
     </>
   );
 }
