@@ -55,7 +55,7 @@ export default function App() {
           <Route path="/" element={ <HomePage clothesItems={clothesItems} categories={categoriesRef.current} /> } />
           <Route path="/orders" element={ <OrderHistoryPage /> } />
           <Route path="/orders/cart" element={ <CartPage cart={cart} /> } />
-          <Route path="/login" element={<AuthPage setUser={setUser} />} />
+          <Route path="/login" element={user ? <Navigate to="/" /> : <AuthPage setUser={setUser} />} />
           <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />
           <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} handleAddToCart={handleAddToCart} />} />
           {/* redirect to "/" if path in address bar hasn't matched a <Route> above */}
