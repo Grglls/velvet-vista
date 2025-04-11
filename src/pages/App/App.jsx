@@ -7,6 +7,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
 import CartPage from '../CartPage/CartPage';
+import CheckoutPage from '../CheckoutPage/CheckoutPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import CategoryPage from '../CategoryPage/CategoryPage';
 import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
@@ -47,6 +48,11 @@ export default function App() {
     setCart(updatedCart);
   }
 
+  async function handleCheckout(address) {
+    await ordersAPI.checkout(address);
+    navigate('/orders');
+  }
+
   return (
     <>
       <NavBar user={user} setUser={setUser} categories={categoriesRef.current} cart={cart} />
@@ -55,6 +61,7 @@ export default function App() {
           <Route path="/" element={ <HomePage clothesItems={clothesItems} categories={categoriesRef.current} /> } />
           <Route path="/orders" element={ <OrderHistoryPage /> } />
           <Route path="/orders/cart" element={ <CartPage cart={cart} /> } />
+          <Route path="/orders/checkout" element={ <CheckoutPage cart={cart} handleCheckout={handleCheckout} /> } />
           <Route path="/login" element={user ? <Navigate to="/" /> : <AuthPage setUser={setUser} />} />
           <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />
           <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} handleAddToCart={handleAddToCart} />} />
