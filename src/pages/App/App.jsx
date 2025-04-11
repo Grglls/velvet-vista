@@ -6,7 +6,7 @@ import * as ordersAPI from '../../utilities/orders-api';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
+import CartPage from '../CartPage/CartPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import CategoryPage from '../CategoryPage/CategoryPage';
 import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
@@ -54,7 +54,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={ <HomePage clothesItems={clothesItems} categories={categoriesRef.current} /> } />
           <Route path="/orders" element={ <OrderHistoryPage /> } />
-          <Route path="/orders/new" element={ <NewOrderPage /> } />
+          <Route path="/orders/cart" element={ <CartPage cart={cart} /> } />
           <Route path="/login" element={<AuthPage setUser={setUser} />} />
           <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />
           <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} handleAddToCart={handleAddToCart} />} />

@@ -41,7 +41,7 @@ export default function NavBar({ user, setUser, categories, cart }) {
                   <Link to="/orders" className="nav-link">Order History</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/orders/new" className="nav-link">
+                  <Link to="/orders/cart" className="nav-link">
                     Cart
                     &nbsp;
                     { cart && <span className="badge text-bg-secondary"> {cart.totalQuantity}</span>}
