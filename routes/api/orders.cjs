@@ -11,5 +11,7 @@ router.get('/cart', ensureLoggedIn, ordersCtrl.cart);
 router.post('/cart/items', ensureLoggedIn, ordersCtrl.addToCart);
 // POST /api/orders/cart/checkout
 router.post('/cart/checkout', ensureLoggedIn, ordersCtrl.checkout);
+// GET /api/orders
+router.get('/', ensureLoggedIn, ordersCtrl.index);
 
 module.exports = router;
