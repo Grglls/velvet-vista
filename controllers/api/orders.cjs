@@ -1,10 +1,10 @@
-const { add } = require('../../models/itemSchema.cjs');
 const Order = require('../../models/order.cjs');
 
 module.exports = {
   cart,
   addToCart,
   checkout,
+  index,
 };
   
 async function cart(req, res) {
@@ -24,4 +24,12 @@ async function checkout(req, res) {
   cart.isPaid = true;
   await cart.save();
   res.json(cart);
+}
+
+async function index(req, res) {
+  const orders = await Order.find({ 
+    'user': req.user._id,
+    'isPaid': true 
+  }).sort('updateAt');
+  res.json(orders);
 }
