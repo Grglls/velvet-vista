@@ -1,3 +1,5 @@
+import LineItem from "../LineItem/LineItem";
+
 export default function OrderSummary({ order }) {
   return (
     <table className="table table-striped align-middle">
@@ -12,16 +14,7 @@ export default function OrderSummary({ order }) {
         </thead>
         <tbody>
           {order.lineItems.map((lineItem, index) => (
-            <tr key={index}>
-              <td scope="row">
-                <img src={lineItem.item.image} alt={lineItem.item.name} style={{"maxHeight": "80px"}} className="img-fluid me-2 d-block d-sm-inline" />
-                {lineItem.item.name}
-              </td>
-              <td>{lineItem.size}</td>
-              <td>{lineItem.quantity}</td>
-              <td>${lineItem.item.price}</td>
-              <td>${(lineItem.item.price * lineItem.quantity).toFixed(2)}</td>
-            </tr>
+            <LineItem key={index} lineItem={lineItem} />
           ))}
           <tr>
             <th colSpan="4">Total</th>
