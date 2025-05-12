@@ -12,6 +12,11 @@ export function addItemToCart(itemId, size, quantity) {
   return sendRequest(`${BASE_URL}/cart/items`, 'POST', { itemId, size, quantity });
 }
 
+// Set item quantity in the cart:
+export function setItemQuantity(itemId, size, quantity) {
+  return sendRequest(`${BASE_URL}/cart/quantity`, 'PUT', { itemId, size, quantity });
+}
+
 // Checkout the cart (i.e. update the unpaid order's isPaid property to true):
 export function checkout(address) {
   return sendRequest(`${BASE_URL}/cart/checkout`, 'POST', { address });

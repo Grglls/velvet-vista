@@ -47,6 +47,13 @@ export default function App() {
     const updatedCart = await ordersAPI.addItemToCart(itemId, size, quantity);
     setCart(updatedCart);
   }
+  
+  async function handleChangeQuantity(itemId, size, quantity) {
+    console.log('handleChangeQuantity', itemId, size, quantity);
+    
+    const updatedCart = await ordersAPI.setItemQuantity(itemId, size, quantity);
+    setCart(updatedCart);
+  }
 
   async function handleCheckout(address) {
     await ordersAPI.checkout(address);
@@ -63,7 +70,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={ <HomePage clothesItems={clothesItems} categories={categoriesRef.current} /> } />
           <Route path="/orders" element={ <OrderHistoryPage /> } />
-          <Route path="/orders/cart" element={ <CartPage cart={cart} /> } />
+          <Route path="/orders/cart" element={ <CartPage cart={cart} handleChangeQuantity={handleChangeQuantity} /> } />
           <Route path="/orders/checkout" element={ <CheckoutPage cart={cart} handleCheckout={handleCheckout} /> } />
           <Route path="/login" element={user ? <Navigate to="/" /> : <AuthPage setUser={setUser} />} />
           <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />

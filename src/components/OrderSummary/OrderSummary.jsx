@@ -1,6 +1,6 @@
 import LineItem from "../LineItem/LineItem";
 
-export default function OrderSummary({ order }) {
+export default function OrderSummary({ order, handleChangeQuantity }) {
   return (
     <table className="table table-striped align-middle">
         <thead>
@@ -14,7 +14,7 @@ export default function OrderSummary({ order }) {
         </thead>
         <tbody>
           {order.lineItems.map((lineItem, index) => (
-            <LineItem key={index} lineItem={lineItem} />
+            <LineItem key={index} lineItem={lineItem} handleChangeQuantity={handleChangeQuantity} />
           ))}
           <tr>
             <th colSpan="4">Total</th>
