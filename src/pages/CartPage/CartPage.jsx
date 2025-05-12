@@ -8,7 +8,7 @@ export default function CartPage({ cart }) {
   return (
     <>
       { cart.lineItems.length === 0 ? 
-        <h1>The cart is empty.</h1>
+        <h1>Your cart is empty.</h1>
       :
       <>
         <h1>Items in cart: {cart.lineItems.reduce((acc, curr) => acc + curr.quantity, 0)}</h1>
