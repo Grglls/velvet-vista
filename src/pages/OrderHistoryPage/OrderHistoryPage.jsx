@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import * as ordersAPI from "../../utilities/orders-api";
+import OrderSummaryCard from "../../components/OrderSummaryCard/OrderSummaryCard";
 
 export default function OrderHistoryPage() {
   const [orders, setOrders] = useState([]);
@@ -18,7 +19,7 @@ export default function OrderHistoryPage() {
   return (
     <>
       <h1>Previous Orders</h1>
-      <div>orders: {orders.length}</div>
+      <div>{orders.map((order, index) => <OrderSummaryCard key={index} order={order} />)}</div>
     </>
   );
 }
