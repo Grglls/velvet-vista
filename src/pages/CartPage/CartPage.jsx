@@ -1,4 +1,4 @@
-import OrderSummary from "../../components/OrderSummary/OrderSummary";
+import OrderSummary from "../../components/OrderList/OrderList";
 import { Link } from "react-router-dom";
 
 export default function CartPage({ cart, handleChangeQuantity }) {
