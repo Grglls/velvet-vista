@@ -7,19 +7,6 @@ export default function LineItem({ lineItem, handleChangeQuantity }) {
       </td>
       <td>{lineItem.size}</td>
       <td>
-        {/* <div className="input-group">
-          <button
-            className="btn btn-outline-secondary btn-sm"
-            type="button"
-            onClick={() => handleChangeQuantity(lineItem.item._id, lineItem.size, lineItem.quantity - 1)}
-          >-</button>
-          <span className="form-control w-50" style={{"maxWidth": "40px", "textAlign": "center"}}>{lineItem.quantity}</span>
-          <button
-            className="btn btn-outline-secondary btn-sm"
-            type="button"
-            onClick={() => handleChangeQuantity(lineItem.item._id, lineItem.size, lineItem.quantity + 1)}
-          >+</button>
-        </div> */}
         <div className="btn-group-vertical" role="group" aria-label="Vertical button group">
           <button
             className="btn btn-outline-secondary btn-sm"
