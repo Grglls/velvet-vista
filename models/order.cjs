@@ -40,7 +40,7 @@ orderSchema.virtual('totalQuantity').get(function() {
 
 orderSchema.virtual('orderId').get(function() {
   // Use .id to return a string instead of ._id which returns an Object Id:
-  return this.id.slice(-6);
+  return this.id.slice(-6).toUpperCase();
 });
 
 // Static methods - called on the model itself:
