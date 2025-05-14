@@ -11,6 +11,7 @@ import CheckoutPage from '../CheckoutPage/CheckoutPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import CategoryPage from '../CategoryPage/CategoryPage';
 import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
+import OrderDetailPage from '../OrderDetailPage/OrderDetailPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -72,6 +73,7 @@ export default function App() {
           <Route path="/orders" element={ <OrderHistoryPage /> } />
           <Route path="/orders/cart" element={ <CartPage cart={cart} handleChangeQuantity={handleChangeQuantity} /> } />
           <Route path="/orders/checkout" element={ <CheckoutPage cart={cart} handleCheckout={handleCheckout} /> } />
+          <Route path="/orders/:orderId" element={ <OrderDetailPage /> } />
           <Route path="/login" element={user ? <Navigate to="/" /> : <AuthPage setUser={setUser} />} />
           <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />
           <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} handleAddToCart={handleAddToCart} />} />

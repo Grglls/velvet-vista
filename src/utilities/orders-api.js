@@ -26,3 +26,8 @@ export function checkout(address) {
 export function getAll() {
   return sendRequest(BASE_URL);
 }
+
+// Retrieve a specific order for the logged in user:
+export function getOne(orderId) {
+  return sendRequest(`${BASE_URL}/${orderId}`);
+}

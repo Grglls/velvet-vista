@@ -6,6 +6,7 @@ module.exports = {
   setItemQuantity,
   checkout,
   index,
+  show,
 };
   
 async function cart(req, res) {
@@ -39,4 +40,12 @@ async function index(req, res) {
     'isPaid': true 
   }).sort('updateAt');
   res.json(orders);
+}
+
+async function show(req, res) {
+  const order = await Order.findOne({ 
+    'user': req.user._id,
+    '_id': req.params.id,
+  });
+  res.json(order);
 }
