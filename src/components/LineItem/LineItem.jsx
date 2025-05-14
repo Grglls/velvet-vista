@@ -1,4 +1,4 @@
-export default function LineItem({ lineItem, handleChangeQuantity }) {
+export default function LineItem({ lineItem, handleChangeQuantity, isPaid }) {
   return (
     <tr>
       <td scope="row">
@@ -7,19 +7,23 @@ export default function LineItem({ lineItem, handleChangeQuantity }) {
       </td>
       <td>{lineItem.size}</td>
       <td>
-        <div className="btn-group-vertical" role="group" aria-label="Vertical button group">
-          <button
-            className="btn btn-outline-secondary btn-sm"
-            type="button"
-            onClick={() => handleChangeQuantity(lineItem.item._id, lineItem.size, lineItem.quantity + 1)}
-          >+</button>
-          <span className="btn btn-outline-secondary" style={{"textAlign": "center", "color": "white"}}>{lineItem.quantity}</span>
-          <button
-            className="btn btn-outline-secondary btn-sm"
-            type="button"
-            onClick={() => handleChangeQuantity(lineItem.item._id, lineItem.size, lineItem.quantity - 1)}
-          >-</button>
-        </div>
+        {!isPaid ? 
+          <div className="btn-group-vertical" role="group" aria-label="Vertical button group">
+            <button
+              className="btn btn-outline-secondary btn-sm"
+              type="button"
+              onClick={() => handleChangeQuantity(lineItem.item._id, lineItem.size, lineItem.quantity + 1)}
+            >+</button>
+            <span className="btn btn-outline-secondary" style={{"textAlign": "center", "color": "white"}}>{lineItem.quantity}</span>
+            <button
+              className="btn btn-outline-secondary btn-sm"
+              type="button"
+              onClick={() => handleChangeQuantity(lineItem.item._id, lineItem.size, lineItem.quantity - 1)}
+            >-</button>
+          </div>
+        :
+          <>{lineItem.quantity}</>
+        }
       </td>
       <td>${lineItem.item.price}</td>
       <td>${(lineItem.item.price * lineItem.quantity).toFixed(2)}</td>

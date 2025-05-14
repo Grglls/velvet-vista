@@ -14,7 +14,7 @@ export default function OrderTabulated({ order, handleChangeQuantity }) {
         </thead>
         <tbody>
           {order.lineItems.map((lineItem, index) => (
-            <LineItem key={index} lineItem={lineItem} handleChangeQuantity={handleChangeQuantity} />
+            <LineItem key={index} lineItem={lineItem} handleChangeQuantity={handleChangeQuantity} isPaid={order.isPaid} />
           ))}
           <tr>
             <th colSpan="4">Total</th>
