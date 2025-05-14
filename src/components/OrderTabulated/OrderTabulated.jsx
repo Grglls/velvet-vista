@@ -1,8 +1,6 @@
 import LineItem from "../LineItem/LineItem";
 
 export default function OrderTabulated({ order, handleChangeQuantity }) {
-  console.log('order: ', order);
-  
   return (
     <table className="table table-striped align-middle">
         <thead>
