@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import * as ordersAPI from '../../utilities/orders-api';
 import OrderTabulated from '../../components/OrderTabulated/OrderTabulated';
+import AddressTabulated from '../../components/AddressTabulated/AddressTabulated';
 
 export default function OrderDetailPage() {
   const orderId = useParams().orderId;
@@ -18,6 +19,8 @@ export default function OrderDetailPage() {
   // Wait until order is populated:
   if (!order) return <p>Loading...</p>;
 
+  console.log('OrderDetailPage', order.address);
+
   return (
     <>
       <h1>Order Details</h1>
@@ -29,6 +32,7 @@ export default function OrderDetailPage() {
           <p className="card-text">Date ordered: <span className="float-end">{new Date(order.createdAt).toLocaleDateString()}</span></p>
         </div>
       </div>
+      <AddressTabulated address={order.address} />
       <OrderTabulated order={order} />
     </>
   );
