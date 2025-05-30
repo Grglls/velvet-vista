@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import ClothingItemCard from "../../components/ClothingItemCard";
+import ClothingItemCard from "../components/ClothingItemCard";
 
 export default function CategoryPage({ clothesItems }) {
   const category = useParams().categoryId;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ClothingItemCard from "../ClothingItemCard/ClothingItemCard";
+import ClothingItemCard from "./ClothingItemCard";
 
 export default function CategoryPreview({ category, clothes }) {
   return (

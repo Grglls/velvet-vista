@@ -1,17 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
-import { getUser } from '../../utilities/users-service';
-import * as itemsAPI from '../../utilities/items-api';
-import * as ordersAPI from '../../utilities/orders-api';
-import NavBar from '../../components/NavBar';
-import HomePage from '../HomePage/HomePage';
-import AuthPage from '../AuthPage/AuthPage';
-import CartPage from '../CartPage/CartPage';
-import CheckoutPage from '../CheckoutPage/CheckoutPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
-import CategoryPage from '../CategoryPage/CategoryPage';
-import ItemDetailPage from '../ItemDetailPage/ItemDetailPage';
-import OrderDetailPage from '../OrderDetailPage/OrderDetailPage';
+import { getUser } from '../utilities/users-service';
+import * as itemsAPI from '../utilities/items-api';
+import * as ordersAPI from '../utilities/orders-api';
+import NavBar from '../components/NavBar';
+import HomePage from './HomePage';
+import AuthPage from './AuthPage';
+import CartPage from './CartPage';
+import CheckoutPage from './CheckoutPage';
+import OrderHistoryPage from './OrderHistoryPage';
+import CategoryPage from './CategoryPage';
+import ItemDetailPage from './ItemDetailPage';
+import OrderDetailPage from './OrderDetailPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());

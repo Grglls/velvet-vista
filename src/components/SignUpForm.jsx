@@ -1,9 +1,9 @@
 // Build this component as a Class to show the difference (may encounter this in the wild)
 // However, React is moving towards the newer function based components these days.
 import { Component } from "react";
-import { signUp } from "../../utilities/users-service";
+import { signUp } from "../utilities/users-service";
 // Import withRouter Higher Order Component (HOC) to get access to the navigate function:
-import { withRouter } from "../../utilities/withRouter";
+import { withRouter } from "../utilities/withRouter";
 
 class SignUpForm extends Component {
   state = {

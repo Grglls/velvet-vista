@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import * as ordersAPI from '../../utilities/orders-api';
-import OrderTabulated from '../../components/OrderTabulated';
-import AddressTabulated from '../../components/AddressTabulated';
+import * as ordersAPI from '../utilities/orders-api';
+import OrderTabulated from '../components/OrderTabulated';
+import AddressTabulated from '../components/AddressTabulated';
 
 export default function OrderDetailPage() {
   const orderId = useParams().orderId;
   const [order, setOrder] = useState(null);
-  
+
   useEffect(function() {
     async function getOrder() {
       const order = await ordersAPI.getOne(orderId);
@@ -15,7 +15,7 @@ export default function OrderDetailPage() {
     }
     getOrder();
   }, [orderId]);
-  
+
   // Wait until order is populated:
   if (!order) return <p>Loading...</p>;
 
