@@ -1,4 +1,4 @@
-import OrderTabulated from "../../components/OrderTabulated/OrderTabulated";
+import OrderTabulated from "../../components/OrderTabulated";
 import { Link } from "react-router-dom";
 
 export default function CartPage({ cart, handleChangeQuantity }) {

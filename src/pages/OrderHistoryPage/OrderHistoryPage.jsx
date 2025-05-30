@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import * as ordersAPI from "../../utilities/orders-api";
-import OrderSummaryCard from "../../components/OrderSummaryCard/OrderSummaryCard";
+import OrderSummaryCard from "../../components/OrderSummaryCard";
 
 export default function OrderHistoryPage() {
   const [orders, setOrders] = useState([]);

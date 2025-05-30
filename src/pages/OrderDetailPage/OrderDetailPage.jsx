@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import * as ordersAPI from '../../utilities/orders-api';
-import OrderTabulated from '../../components/OrderTabulated/OrderTabulated';
-import AddressTabulated from '../../components/AddressTabulated/AddressTabulated';
+import OrderTabulated from '../../components/OrderTabulated';
+import AddressTabulated from '../../components/AddressTabulated';
 
 export default function OrderDetailPage() {
   const orderId = useParams().orderId;

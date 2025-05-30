@@ -3,7 +3,7 @@ import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import * as itemsAPI from '../../utilities/items-api';
 import * as ordersAPI from '../../utilities/orders-api';
-import NavBar from '../../components/NavBar/NavBar';
+import NavBar from '../../components/NavBar';
 import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
 import CartPage from '../CartPage/CartPage';

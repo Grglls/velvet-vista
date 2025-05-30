@@ -1,4 +1,4 @@
-import LineItem from "../LineItem/LineItem";
+import LineItem from "./LineItem";
 
 export default function OrderTabulated({ order, handleChangeQuantity }) {
   return (
