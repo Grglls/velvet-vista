@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const itemSchema = require('./itemSchema.cjs');
 const addressSchema = require('./addressSchema.cjs');
-const { findOneAndUpdate } = require('./item.cjs');
 
 const lineItemSchema = new Schema({
   item: itemSchema,
