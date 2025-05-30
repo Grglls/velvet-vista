@@ -1,9 +1,16 @@
+import { Link } from "react-router-dom";
+
 export default function LineItem({ lineItem, handleChangeQuantity, isPaid }) {
   return (
     <tr>
       <td scope="row">
-        <img src={lineItem.item.image} alt={lineItem.item.name} style={{"maxHeight": "80px"}} className="img-fluid me-2 d-block d-sm-inline" />
-        {lineItem.item.name}
+        <Link
+          to={`/items/${lineItem.item._id}`}
+          className="link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-offset-2"
+        >
+          <img src={lineItem.item.image} alt={lineItem.item.name} style={{"maxHeight": "80px"}} className="img-fluid me-2 d-block d-sm-inline" />
+          {lineItem.item.name}
+        </Link>
       </td>
       <td>{lineItem.size}</td>
       <td>
