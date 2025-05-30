@@ -70,10 +70,10 @@ export default function App() {
       <div className="container-fluid mt-2" style={{"maxWidth": "1000px"}}>
         <Routes>
           <Route path="/" element={ <HomePage clothesItems={clothesItems} categories={categoriesRef.current} /> } />
-          <Route path="/orders" element={ <OrderHistoryPage /> } />
-          <Route path="/orders/cart" element={ <CartPage cart={cart} handleChangeQuantity={handleChangeQuantity} /> } />
-          <Route path="/orders/checkout" element={ <CheckoutPage cart={cart} handleCheckout={handleCheckout} /> } />
-          <Route path="/orders/:orderId" element={ <OrderDetailPage /> } />
+          <Route path="/orders" element={user ? <OrderHistoryPage /> : <Navigate to="/login" /> } />
+          <Route path="/orders/cart" element={user ? <CartPage cart={cart} handleChangeQuantity={handleChangeQuantity} /> : <Navigate to="/login" /> } />
+          <Route path="/orders/checkout" element={user ? <CheckoutPage cart={cart} handleCheckout={handleCheckout} /> : <Navigate to="/login" /> } />
+          <Route path="/orders/:orderId" element={user ? <OrderDetailPage /> : <Navigate to="/login" /> } />
           <Route path="/login" element={user ? <Navigate to="/" /> : <AuthPage setUser={setUser} />} />
           <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />
           <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} handleAddToCart={handleAddToCart} />} />
