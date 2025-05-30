@@ -6,11 +6,11 @@ import * as ordersAPI from '../utilities/orders-api';
 import NavBar from '../components/NavBar';
 import HomePage from './HomePage';
 import AuthPage from './AuthPage';
-import CartPage from './CartPage';
-import CheckoutPage from './CheckoutPage';
-import OrderHistoryPage from './OrderHistoryPage';
 import CategoryPage from './CategoryPage';
 import ItemDetailPage from './ItemDetailPage';
+import OrderHistoryPage from './OrderHistoryPage';
+import CartPage from './CartPage';
+import CheckoutPage from './CheckoutPage';
 import OrderDetailPage from './OrderDetailPage';
 
 export default function App() {
@@ -70,13 +70,13 @@ export default function App() {
       <div className="container-fluid mt-2" style={{"maxWidth": "1000px"}}>
         <Routes>
           <Route path="/" element={ <HomePage clothesItems={clothesItems} categories={categoriesRef.current} /> } />
+          <Route path="/login" element={user ? <Navigate to="/" /> : <AuthPage setUser={setUser} />} />
+          <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />
+          <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} handleAddToCart={handleAddToCart} />} />
           <Route path="/orders" element={user ? <OrderHistoryPage /> : <Navigate to="/login" /> } />
           <Route path="/orders/cart" element={user ? <CartPage cart={cart} handleChangeQuantity={handleChangeQuantity} /> : <Navigate to="/login" /> } />
           <Route path="/orders/checkout" element={user ? <CheckoutPage cart={cart} handleCheckout={handleCheckout} /> : <Navigate to="/login" /> } />
           <Route path="/orders/:orderId" element={user ? <OrderDetailPage /> : <Navigate to="/login" /> } />
-          <Route path="/login" element={user ? <Navigate to="/" /> : <AuthPage setUser={setUser} />} />
-          <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />
-          <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} handleAddToCart={handleAddToCart} />} />
           {/* redirect to "/" if path in address bar hasn't matched a <Route> above */}
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
