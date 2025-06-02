@@ -30,21 +30,19 @@ export default function LoginForm({ setUser }) {
   };
 
   return (
-    <div>
-      <div className="container-sm mw-100" style={{width: '400px'}}>
-        <form autoComplete="off" onSubmit={handleSubmit}>
-          <div className="mb-3">
-            <label className="form-label">Email</label>
-            <input className="form-control" type="email" name="email" value={credentials.email} onChange={handleChange} required />
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Password</label>
-            <input className="form-control" type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          </div>
-          <button className="btn btn-primary" type="submit">Log In</button>
-        </form>
-      </div>
-      <p className="error-message">&nbsp;{error}</p>
+    <div className="container-sm mw-100" style={{width: '400px'}}>
+      <form autoComplete="off" onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <label className="form-label">Email</label>
+          <input className="form-control" type="email" name="email" value={credentials.email} onChange={handleChange} required />
+        </div>
+        <div className="mb-3">
+          <label className="form-label">Password</label>
+          <input className="form-control" type="password" name="password" value={credentials.password} onChange={handleChange} required />
+        </div>
+        <button className="btn btn-primary" type="submit">Log In</button>
+      </form>
+      <p className="mt-3 text-danger">&nbsp;{error}</p>
     </div>
   );
 }
