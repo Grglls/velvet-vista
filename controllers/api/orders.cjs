@@ -37,10 +37,10 @@ async function checkout(req, res) {
 }
 
 async function index(req, res) {
-  const orders = await Order.find({ 
+  const orders = await Order.find({
     'user': req.user._id,
-    'isPaid': true 
-  }).sort('updateAt');
+    'isPaid': true
+  }).sort('updatedAt');
   res.json(orders);
 }
 
