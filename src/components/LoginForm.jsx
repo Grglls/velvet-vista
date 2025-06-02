@@ -40,7 +40,9 @@ export default function LoginForm({ setUser }) {
           <label className="form-label">Password</label>
           <input className="form-control" type="password" name="password" value={credentials.password} onChange={handleChange} required />
         </div>
-        <button className="btn btn-primary" type="submit">Log In</button>
+        <div className="d-grid gap-2">
+          <button className="btn btn-primary" type="submit">Log In</button>
+        </div>
       </form>
       <p className="mt-3 text-danger">&nbsp;{error}</p>
     </div>
