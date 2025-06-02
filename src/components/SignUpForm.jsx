@@ -47,7 +47,7 @@ class SignUpForm extends Component {
   render() {
     const disable = this.state.password !== this.state.confirm;
     return (
-      <div className="container-sm mw-100" style={{width: '400px'}}>
+      <>
         <form autoComplete="off" onSubmit={this.handleSubmit}>
           <div className="mb-3">
             <label className="form-label">Name</label>
@@ -70,7 +70,7 @@ class SignUpForm extends Component {
           </div>
         </form>
         <p className="mt-3 text-danger">&nbsp;{this.state.error}</p>
-      </div>
+      </>
     );
   }  
 }

@@ -30,7 +30,7 @@ export default function LoginForm({ setUser }) {
   };
 
   return (
-    <div className="container-sm mw-100" style={{width: '400px'}}>
+    <>
       <form autoComplete="off" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label className="form-label">Email</label>
@@ -45,6 +45,6 @@ export default function LoginForm({ setUser }) {
         </div>
       </form>
       <p className="mt-3 text-danger">&nbsp;{error}</p>
-    </div>
+    </>
   );
 }
