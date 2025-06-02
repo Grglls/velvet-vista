@@ -50,22 +50,22 @@ class SignUpForm extends Component {
       <div>
         <div className="container-sm mw-100" style={{width: '400px'}}>
           <form autoComplete="off" onSubmit={this.handleSubmit}>
-          <div className="mb-3">
-            <label className="form-label">Name</label>
-            <input className="form-control" type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Email</label>
-            <input className="form-control" type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Password</label>
-            <input className="form-control" type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
-          </div>
-            <label className="form-label">Confirm</label>
-            <input className="form-control" type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
-          <div className="mb-3">
-          </div>
+            <div className="mb-3">
+              <label className="form-label">Name</label>
+              <input className="form-control" type="text" name="name" value={this.state.name} onChange={this.handleChange} required />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Email</label>
+              <input className="form-control" type="email" name="email" value={this.state.email} onChange={this.handleChange} required />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Password</label>
+              <input className="form-control" type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Confirm</label>
+              <input className="form-control" type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
+            </div>
             <button className="btn btn-primary" type="submit" disabled={disable}>SIGN UP</button>
           </form>
         </div>
