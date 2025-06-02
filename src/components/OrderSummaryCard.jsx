@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 export default function OrderSummaryCard({ order }) {
   return (
     <Link
-    to={`/orders/${order._id}`}
-    className="card mb-3 focus-ring focus-ring-light link-light link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-offset-2"
+      to={`/orders/${order._id}`}
+      className="card mb-3 hoverable focus-ring focus-ring-light link-light link-underline link-underline-opacity-0"
     >
       <div className="card-body">
         <h5 className="card-title">Order ID: {order.orderId}</h5>
