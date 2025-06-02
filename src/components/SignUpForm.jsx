@@ -65,7 +65,7 @@ class SignUpForm extends Component {
             <label className="form-label">Confirm</label>
             <input className="form-control" type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
           </div>
-          <button className="btn btn-primary" type="submit" disabled={disable}>SIGN UP</button>
+          <button className="btn btn-primary" type="submit" disabled={disable}>Sign Up</button>
         </form>
         <p className="mt-3 text-danger">&nbsp;{this.state.error}</p>
       </div>
