@@ -15,6 +15,8 @@ router.put('/cart/quantity', ensureLoggedIn, ordersCtrl.setItemQuantity);
 router.post('/cart/checkout', ensureLoggedIn, ordersCtrl.checkout);
 // GET /api/orders
 router.get('/', ensureLoggedIn, ordersCtrl.index);
+// GET /api/orders/addresses
+router.get('/addresses', ensureLoggedIn, ordersCtrl.getAddresses);
 // GET /api/orders/:id
 router.get('/:id', ensureLoggedIn, ordersCtrl.show);
 

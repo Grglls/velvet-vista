@@ -27,6 +27,11 @@ export function getAll() {
   return sendRequest(BASE_URL);
 }
 
+// Retrieve the previously used addresses for the logged in user:
+export function getAddresses() {
+  return sendRequest(`${BASE_URL}/addresses`);
+}
+
 // Retrieve a specific order for the logged in user:
 export function getOne(orderId) {
   return sendRequest(`${BASE_URL}/${orderId}`);

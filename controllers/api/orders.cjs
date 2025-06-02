@@ -1,4 +1,5 @@
 const Order = require('../../models/order.cjs');
+const mongoose = require('mongoose');
 
 module.exports = {
   cart,
@@ -7,6 +8,7 @@ module.exports = {
   checkout,
   index,
   show,
+  getAddresses,
 };
   
 async function cart(req, res) {
@@ -48,4 +50,43 @@ async function show(req, res) {
     '_id': req.params.id,
   });
   res.json(order);
+}
+
+async function getAddresses(req, res) {
+  // Note: the aggregate query runs directly on the MongoDB, 
+  //  so we need to convert the user ID to a MongoDB ObjectId.
+  // The index and show functions above use Mongoose's query methods,
+  //  which automatically convert the user ID to an ObjectId for us.
+  const userId = new mongoose.Types.ObjectId(req.user._id);
+  const addresses = await Order.aggregate([
+    { $match: { user: userId, isPaid: true } },
+    { $project: {
+        address: {
+          firstName: "$address.firstName",
+          lastName: "$address.lastName",
+          phone: "$address.phone",
+          street: "$address.street",
+          city: "$address.city",
+          state: "$address.state",
+          postcode: "$address.postcode",
+          country: "$address.country"
+        }
+      }
+    },
+    { $group: {
+        _id: {
+          firstName: "$address.firstName",
+          lastName: "$address.lastName",
+          phone: "$address.phone",
+          street: "$address.street",
+          city: "$address.city",
+          state: "$address.state",
+          postcode: "$address.postcode",
+          country: "$address.country"
+        }
+      }
+    },
+    { $replaceRoot: { newRoot: "$_id" } }
+  ]);
+  res.json(addresses);
 }
