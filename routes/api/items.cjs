@@ -6,5 +6,7 @@ const itemsCtrl = require('../../controllers/api/items.cjs');
 
 // GET /api/items
 router.get('/', itemsCtrl.index);
+// GET /api/items/search/:searchTerm
+router.get('/search/:searchTerm', itemsCtrl.search);
 
 module.exports = router;

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 import * as usersService from "../utilities/users-service"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
-export default function NavBar({ user, setUser, categories, cart }) {
+export default function NavBar({ user, setUser, categories, cart, handleSearch }) {
   const collapseRef = useRef(null);
+  const [ searchTerm, setSearchTerm ] = useState("");
 
   function handleLogOut() {
     // Delegate to the users-service:
@@ -21,6 +22,11 @@ export default function NavBar({ user, setUser, categories, cart }) {
         : null;
       collapse?.hide();
     }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    handleSearch(searchTerm);
   }
 
   return (
@@ -73,6 +79,18 @@ export default function NavBar({ user, setUser, categories, cart }) {
               </li>
             }
           </ul>
+          <form className="d-flex" role="search" onSubmit={handleSubmit}>
+            <input
+              name="searchTerm"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className="btn btn-outline-success" type="submit" onClick={handleCollapse}>Search</button>
+          </form>
         </div>
       </div>
     </nav>

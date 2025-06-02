@@ -5,3 +5,7 @@ const BASE_URL = '/api/items';
 export async function getAll() {
   return sendRequest(BASE_URL);
 }
+
+export async function search(searchTerm) {
+  return sendRequest(`${BASE_URL}/search/${searchTerm}`);
+}

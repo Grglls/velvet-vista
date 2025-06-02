@@ -12,6 +12,7 @@ import OrderHistoryPage from './OrderHistoryPage';
 import CartPage from './CartPage';
 import CheckoutPage from './CheckoutPage';
 import OrderDetailPage from './OrderDetailPage';
+import SearchPage from './SearchPage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -19,6 +20,7 @@ export default function App() {
   const categoriesRef = useRef([]);
   const [cart, setCart] = useState(null);
   const navigate = useNavigate();
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(function() {
     async function getItems() {
@@ -64,15 +66,24 @@ export default function App() {
     setCart(cart);
   }
 
+  async function handleSearch(searchTerm) {
+    if (!searchTerm) return; // Exit the effect if no search term is entered.
+    
+    navigate('items/search/' + searchTerm);
+    const results = await itemsAPI.search(searchTerm);
+    setSearchResults(results);
+  }
+
   return (
     <>
-      <NavBar user={user} setUser={setUser} categories={categoriesRef.current} cart={cart} />
+      <NavBar user={user} setUser={setUser} categories={categoriesRef.current} cart={cart} handleSearch={handleSearch} />
       <div className="container-fluid mt-2" style={{"maxWidth": "1000px"}}>
         <Routes>
           <Route path="/" element={ <HomePage clothesItems={clothesItems} categories={categoriesRef.current} /> } />
           <Route path="/login" element={user ? <Navigate to="/" /> : <AuthPage setUser={setUser} />} />
           <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />
           <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} handleAddToCart={handleAddToCart} />} />
+          <Route path="/items/search/:searchTerm" element={<SearchPage searchResults={searchResults} />} />
           <Route path="/orders" element={user ? <OrderHistoryPage /> : <Navigate to="/login" /> } />
           <Route path="/orders/cart" element={user ? <CartPage cart={cart} handleChangeQuantity={handleChangeQuantity} /> : <Navigate to="/login" /> } />
           <Route path="/orders/checkout" element={user ? <CheckoutPage cart={cart} handleCheckout={handleCheckout} /> : <Navigate to="/login" /> } />
