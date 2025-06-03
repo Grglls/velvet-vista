@@ -49,6 +49,8 @@ export default function App() {
     }
     const updatedCart = await ordersAPI.addItemToCart(itemId, size, quantity);
     setCart(updatedCart);
+    // Redirect to cart page after adding item:
+    navigate('/orders/cart');
   }
   
   async function handleChangeQuantity(itemId, size, quantity) {
