@@ -3,7 +3,7 @@ import * as ordersAPI from "../utilities/orders-api";
 import OrderSummaryCard from "../components/OrderSummaryCard";
 
 export default function OrderHistoryPage() {
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState(null);
 
   useEffect(function() {
     async function getOrders() {
@@ -14,12 +14,20 @@ export default function OrderHistoryPage() {
   }, []);
 
   // Wait until orders are populated:
-  if (!orders) return <p>Loading...</p>;
+  if (!orders) return <p>Loading orders...</p>;
 
   return (
     <>
       <h1>Previous Orders</h1>
-      <div>{orders.map((order, index) => <OrderSummaryCard key={index} order={order} />)}</div>
+      {orders.length > 0 ? (
+        <>
+          {orders.map((order, index) => (
+            <OrderSummaryCard order={order} key={index} />
+          ))}
+        </>
+      ) : (
+        <p>No previous orders found.</p>
+      )}
     </>
   );
 }
