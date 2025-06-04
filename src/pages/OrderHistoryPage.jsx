@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import * as ordersAPI from "../utilities/orders-api";
 import OrderSummaryCard from "../components/OrderSummaryCard";
 
-export default function OrderHistoryPage() {
+export default function OrderHistoryPage({ user }) {
   const [orders, setOrders] = useState(null);
 
   useEffect(function() {
@@ -18,7 +18,7 @@ export default function OrderHistoryPage() {
 
   return (
     <>
-      <h1>Previous Orders</h1>
+      <h1>{user.name}'s Previous Orders</h1>
       {orders.length > 0 ? (
         <>
           {orders.map((order, index) => (

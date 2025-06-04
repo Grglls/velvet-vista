@@ -86,7 +86,7 @@ export default function App() {
           <Route path="/category/:categoryId" element={<CategoryPage clothesItems={clothesItems} />} />
           <Route path="/items/:itemId" element={<ItemDetailPage clothesItems={clothesItems} handleAddToCart={handleAddToCart} />} />
           <Route path="/items/search/:searchTerm" element={<SearchPage searchResults={searchResults} />} />
-          <Route path="/orders" element={user ? <OrderHistoryPage /> : <Navigate to="/login" /> } />
+          <Route path="/orders" element={user ? <OrderHistoryPage user={user} /> : <Navigate to="/login" /> } />
           <Route path="/orders/cart" element={user ? <CartPage cart={cart} handleChangeQuantity={handleChangeQuantity} /> : <Navigate to="/login" /> } />
           <Route path="/orders/checkout" element={user ? <CheckoutPage cart={cart} handleCheckout={handleCheckout} /> : <Navigate to="/login" /> } />
           <Route path="/orders/:orderId" element={user ? <OrderDetailPage /> : <Navigate to="/login" /> } />
