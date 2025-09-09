@@ -19,16 +19,16 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 | My Posts | All Users | Search | -->
 
 ## Technologies Used:
-* Node.js: to run the backend server.
-* Express: for the backend server framework.
-* MongoDB: to persist data in to a database.
-* Mongoose: to interact with the database.
-* BCrypt: to provide authentication using JavaScript Web Tokens (JWTs).
-* React: for the frontend single page app (SPA).
-* Vite: to build the react app.
-* Bootstrap: to achieve the CSS layout.
-* Heroku: to host the live app.
-* Atlas: to host the MongoDB database.
+* __Node.js__: to run the backend server.
+* __Express__: for the backend server framework.
+* __MongoDB__: to persist data in to a database.
+* __Mongoose__: to interact with the database.
+* __BCrypt__: to provide authentication using JavaScript Web Tokens (JWTs).
+* __React__: for the frontend single page app (SPA).
+* __Vite__: to build the react app.
+* __Bootstrap__: to achieve the CSS layout.
+* __Heroku__: to host the live app.
+* __Atlas__: to host the MongoDB database.
 
 ## Getting Started:
 [Try the live website here.](https://velvet-vista-30171128f9c5.herokuapp.com/)
