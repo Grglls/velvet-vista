@@ -1,3 +1,47 @@
-# MERN-Stack Infrastructure - Vite
+# Velvet Vista
+This project is an eCommerce website for a clothing store.
 
-Clone this repo to provide the starter code for a comprehensive MERN-Stack project including token-based authentication.
+Visitors to the site may browse the items for sale without signing in.
+
+To add items to the cart, and checkout an order, users must sign-in with an account. Visitors can sign-up for an account using email and password.
+
+## Screenshots:
+<!-- | ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) |
+|:---:|:---:|:---:|
+| Home Page | Navbar - Visitors | Navbar - Users |
+
+| ![Post - Visitors](screenshots/3_post_visitor.png) | ![Post - Users](screenshots/3_post_user.png) | ![New Post](screenshots/4_new_post.png) |
+|:---:|:---:|:---:|
+| Post - Visitors | Post - Users | New Post |
+
+| ![My Posts](screenshots/5_my_posts.png) | ![All Users](screenshots/6_all_users.png) | ![Search](screenshots/7_search.png) |
+|:---:|:---:|:---:|
+| My Posts | All Users | Search | -->
+
+## Technologies Used:
+* Node.js: to run the backend server.
+* Express: for the backend server framework.
+* MongoDB: to persist data in to a database.
+* Mongoose: to interact with the database.
+* BCrypt: to provide authentication using JavaScript Web Tokens (JWTs).
+* React: for the frontend single page app (SPA).
+* Vite: to build the react app.
+* Bootstrap: to achieve the CSS layout.
+* Heroku: to host the live app.
+* Atlas: to host the MongoDB database.
+
+## Getting Started:
+[Try the live website here.](https://velvet-vista-30171128f9c5.herokuapp.com/)
+
+The project was planned out in a Trello board, view it on Trello [here.](https://trello.com/b/jf9ay66D/velvet-vista-project-planning)
+
+The Entity Relationship Diagram (ERD) was made using Lucid Chart and can be seen in the Trello board.
+
+Wireframes of the different pages were made using [wireframe|cc](wireframe.cc) and can be seen in the Trello board.
+
+## Future Development:
+* Add a payment processor to the checkout page.
+* Email receipts to customers.
+
+## Known Bugs:
+No known bugs at this time.
