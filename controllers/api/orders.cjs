@@ -40,7 +40,7 @@ async function index(req, res) {
   const orders = await Order.find({
     'user': req.user._id,
     'isPaid': true
-  }).sort('updatedAt');
+  }).sort('-updatedAt');
   res.json(orders);
 }
 
