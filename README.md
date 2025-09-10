@@ -19,7 +19,7 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 | Checkout | Order Details | Order History | -->
 | ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) | ![Category Page](screenshots/3_category.png) | ![Item Detail Page](screenshots/4_item_detail.png) |
 |:---:|:---:|:---:|:---:|:---:|
-| Home Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Navbar - Visitors&nbsp;&nbsp;&nbsp; | Navbar - Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Category Page | Item Detail Page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| &nbsp;&nbsp;&nbsp;Home Page&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;Navbar - Visitors&nbsp;&nbsp; | &nbsp;&nbsp;Navbar - Users&nbsp;&nbsp;&nbsp; | Category Page | &nbsp;&nbsp;&nbsp;Item Detail Page&nbsp;&nbsp;&nbsp;&nbsp; |
 
 | ![Cart Page](screenshots/5_cart.png) | ![Checkout Page](screenshots/6_checkout.png) | ![Order Detail Page](screenshots/7_order_details.png) | ![Order History Page](screenshots/8_order_history.png) | ![Search](screenshots/9_search.png) |
 |:---:|:---:|:---:|:---:|:---:|
