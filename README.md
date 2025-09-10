@@ -17,9 +17,46 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 | ![Checkout Page](screenshots/6_checkout.png) | ![Order Detail Page](screenshots/7_order_details.png) | ![Order History Page](screenshots/8_order_history.png) |
 |:---:|:---:|:---:|
 | Checkout | Order Details | Order History | -->
-| ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) | ![Category Page](screenshots/3_category.png) | ![Item Detail Page](screenshots/4_item_detail.png) |
+
+<!-- | ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) | ![Category Page](screenshots/3_category.png) | ![Item Detail Page](screenshots/4_item_detail.png) |
 |:---:|:---:|:---:|:---:|:---:|
 | &nbsp;&nbsp;Home&nbsp;Page&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;Navbar&nbsp;-&nbsp;Visitors&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;Navbar&nbsp;-&nbsp;Users&nbsp;&nbsp;&nbsp; | &nbsp;Category&nbsp;Page&nbsp; | Item&nbsp;Detail&nbsp;Page |
+
+| ![Cart Page](screenshots/5_cart.png) | ![Checkout Page](screenshots/6_checkout.png) | ![Order Detail Page](screenshots/7_order_details.png) | ![Order History Page](screenshots/8_order_history.png) | ![Search](screenshots/9_search.png) |
+|:---:|:---:|:---:|:---:|:---:|
+| Cart Page | Checkout Page | Order Detail Page | Order History Page | Search Page | -->
+
+<!-- <img src="screenshots/1_home.png" width="100"> -->
+<img src="screenshots/1_home.png" width="19%">
+<img src="screenshots/1_home.png" width="19%">
+<img src="screenshots/1_home.png" width="19%">
+<img src="screenshots/1_home.png" width="19%">
+<img src="screenshots/1_home.png" width="19%">
+<div style="display:inline-block;width:19%">
+    <img src="screenshots/1_home.png">
+    <p>Home Page</p>
+</div>
+<div style="display:inline-block;width:19%">
+    <img src="screenshots/1_home.png">
+    <p>Home Page</p>
+</div>
+<div style="display:inline-block;width:19%">
+    <img src="screenshots/1_home.png">
+    <p>Home Page</p>
+</div>
+<div style="display:inline-block;width:19%">
+    <img src="screenshots/1_home.png">
+    <p>Home Page</p>
+</div>
+<div style="display:inline-block;width:19%">
+    <img src="screenshots/1_home.png">
+    <p>Home Page</p>
+</div>
+
+
+| ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) | ![Category Page](screenshots/3_category.png) | ![Item Detail Page](screenshots/4_item_detail.png) |
+|:---:|:---:|:---:|:---:|:---:|
+| Home&nbsp;Page | Navbar&nbsp;-&nbsp;Visitors | Navbar&nbsp;-&nbsp;Users | Category&nbsp;Page | Item&nbsp;Detail&nbsp;Page |
 
 | ![Cart Page](screenshots/5_cart.png) | ![Checkout Page](screenshots/6_checkout.png) | ![Order Detail Page](screenshots/7_order_details.png) | ![Order History Page](screenshots/8_order_history.png) | ![Search](screenshots/9_search.png) |
 |:---:|:---:|:---:|:---:|:---:|
