@@ -6,17 +6,17 @@ Visitors to the site may browse the items for sale without signing in.
 To add items to the cart, and checkout an order, users must sign-in with an account. Visitors can sign-up for an account using email and password.
 
 ## Screenshots:
-<!-- | ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) |
+| ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) |
 |:---:|:---:|:---:|
 | Home Page | Navbar - Visitors | Navbar - Users |
 
-| ![Post - Visitors](screenshots/3_post_visitor.png) | ![Post - Users](screenshots/3_post_user.png) | ![New Post](screenshots/4_new_post.png) |
+| ![Post - Visitors](screenshots/3_category.png) | ![Post - Users](screenshots/4_item_detail.png) | ![New Post](screenshots/5_cart.png) |
 |:---:|:---:|:---:|
-| Post - Visitors | Post - Users | New Post |
+| Category | Item Detail | Cart |
 
-| ![My Posts](screenshots/5_my_posts.png) | ![All Users](screenshots/6_all_users.png) | ![Search](screenshots/7_search.png) |
+| ![My Posts](screenshots/6_checkout.png) | ![All Users](screenshots/7_order_details.png) | ![Search](screenshots/8_order_history.png) |
 |:---:|:---:|:---:|
-| My Posts | All Users | Search | -->
+| Checkout | Order Details | Order History |
 
 ## Technologies Used:
 * __Node.js__: to run the backend server.
