@@ -121,11 +121,11 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
   </thead>
   <tbody>
     <tr>
-      <td width="20%">Cart Page</td>
-      <td width="20%">Checkout Page</td>
-      <td width="20%">Order Detail Page</td>
-      <td width="20%">Order History Page</td>
-      <td width="20%">Search Page</td>
+      <td width="20%" align="center">Cart Page</td>
+      <td width="20%" align="center">Checkout Page</td>
+      <td width="20%" align="center">Order Detail Page</td>
+      <td width="20%" align="center">Order History Page</td>
+      <td width="20%" align="center">Search Page</td>
     </tr>
   </tbody>
 </table>
