@@ -41,20 +41,16 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 <div style="display:inline-block;width:19%" class="test-class">
     <img src="screenshots/1_home.png">
     <p align="center">Home Page</p>
-</div>
-<div style="display:inline-block;width:19%">
+</div><div style="display:inline-block;width:19%">
     <img src="screenshots/1_home.png">
     <p align="center">Home Page</p>
-</div>
-<div style="display:inline-block;width:19%">
+</div><div style="display:inline-block;width:19%">
     <img src="screenshots/1_home.png">
     <p align="center">Home Page</p>
-</div>
-<div style="display:inline-block;width:19%">
+</div><div style="display:inline-block;width:19%">
     <img src="screenshots/1_home.png">
     <p align="center">Home Page</p>
-</div>
-<div style="display:inline-block;width:19%">
+</div><div style="display:inline-block;width:19%">
     <img src="screenshots/1_home.png">
     <p align="center">Home Page</p>
 </div>
