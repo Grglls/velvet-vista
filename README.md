@@ -28,6 +28,19 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 
 <!-- <img src="screenshots/1_home.png" width="100"> -->
 <img src="screenshots/1_home.png" width="19%">&nbsp;<img src="screenshots/1_home.png" width="19%">&nbsp;<img src="screenshots/1_home.png" width="19%">&nbsp;<img src="screenshots/1_home.png" width="19%">&nbsp;<img src="screenshots/1_home.png" width="19%">
+
+<table width="100%">
+  <tbody>
+    <tr>
+      <td width="20%">Cart Page</td>
+      <td width="20%">Checkout Page</td>
+      <td width="20%">Order Detail Page</td>
+      <td width="20%">Order History Page</td>
+      <td width="20%">Search Page</td>
+    </tr>
+  </tbody>
+</table>
+
 ----------------------------------------------------------------
 
 | Home&nbsp;Page | Navbar&nbsp;-&nbsp;Visitors | Navbar&nbsp;-&nbsp;Users | Category&nbsp;Page | Item&nbsp;Detail&nbsp;Page |
@@ -105,6 +118,8 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
       <th width="20%"><img src="screenshots/8_order_history.png"/></th>
       <th width="20%"><img src="screenshots/9_search.png"/></th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td width="20%">Cart Page</td>
       <td width="20%">Checkout Page</td>
@@ -112,8 +127,6 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
       <td width="20%">Order History Page</td>
       <td width="20%">Search Page</td>
     </tr>
-  </thead>
-  <tbody>
   </tbody>
 </table>
 
