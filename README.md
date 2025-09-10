@@ -27,11 +27,7 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 | Cart Page | Checkout Page | Order Detail Page | Order History Page | Search Page | -->
 
 <!-- <img src="screenshots/1_home.png" width="100"> -->
-<img src="screenshots/1_home.png" width="19%">
-<img src="screenshots/1_home.png" width="19%">
-<img src="screenshots/1_home.png" width="19%">
-<img src="screenshots/1_home.png" width="19%">
-<img src="screenshots/1_home.png" width="19%">
+<img src="screenshots/1_home.png" width="19%"><img src="screenshots/1_home.png" width="19%"><img src="screenshots/1_home.png" width="19%"><img src="screenshots/1_home.png" width="19%"><img src="screenshots/1_home.png" width="19%">
 <div style="display:inline-block;width:19%" class="test-class">
     <img src="screenshots/1_home.png">
     <p align="center">Home Page</p>
