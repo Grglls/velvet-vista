@@ -68,6 +68,27 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 |:---:|:---:|:---:|:---:|:---:|
 | Cart Page | Checkout Page | Order Detail Page | Order History Page | Search Page |
 
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="20%">First header</th>
+      <th width="20%">Second header long</th>
+      <th width="20%">Third header</th>
+      <th width="20%">Fourth header long</th>
+      <th width="20%">Fifth header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
+      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
+      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
+      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
+      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
+    </tr>
+  </tbody>
+</table>
+
 ## Technologies Used:
 * __Node.js__: to run the backend server.
 * __Express__: for the backend server framework.
