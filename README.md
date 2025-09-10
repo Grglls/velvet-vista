@@ -60,9 +60,9 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 </div>
 
 
-<!-- | ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) | ![Category Page](screenshots/3_category.png) | ![Item Detail Page](screenshots/4_item_detail.png) | -->
-| test | test | test | test | test |
+| ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) | ![Category Page](screenshots/3_category.png) | ![Item Detail Page](screenshots/4_item_detail.png) |
 |:---:|:---:|:---:|:---:|:---:|
+| test | test | test | test | test |
 <!-- | Home&nbsp;Page | Navbar&nbsp;-&nbsp;Visitors | Navbar&nbsp;-&nbsp;Users | Category&nbsp;Page | Item&nbsp;Detail&nbsp;Page | -->
 <!-- | ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) | ![Category Page](screenshots/3_category.png) | ![Item Detail Page](screenshots/4_item_detail.png) |
 |:---:|:---:|:---:|:---:|:---:|
