@@ -96,6 +96,27 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
   </tbody>
 </table>
 
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="20%"><img src="screenshots/5_cart.png"/></th>
+      <th width="20%"><img src="screenshots/6_checkout.png"/></th>
+      <th width="20%"><img src="screenshots/7_order_details.png"/></th>
+      <th width="20%"><img src="screenshots/8_order_history.png"/></th>
+      <th width="20%"><img src="screenshots/9_search.png"/></th>
+    </tr>
+    <tr>
+      <td width="20%">Cart Page</td>
+      <td width="20%">Checkout Page</td>
+      <td width="20%">Order Detail Page</td>
+      <td width="20%">Order History Page</td>
+      <td width="20%">Search Page</td>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
 ## Technologies Used:
 * __Node.js__: to run the backend server.
 * __Express__: for the backend server framework.
