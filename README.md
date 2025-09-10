@@ -32,25 +32,25 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 <img src="screenshots/1_home.png" width="19%">
 <img src="screenshots/1_home.png" width="19%">
 <img src="screenshots/1_home.png" width="19%">
-<div style="display:inline-block;width:19%">
+<div style="display:inline-block;width:19%" class="test-class">
     <img src="screenshots/1_home.png">
-    <p>Home Page</p>
+    <p align="center">Home Page</p>
 </div>
 <div style="display:inline-block;width:19%">
     <img src="screenshots/1_home.png">
-    <p>Home Page</p>
+    <p align="center">Home Page</p>
 </div>
 <div style="display:inline-block;width:19%">
     <img src="screenshots/1_home.png">
-    <p>Home Page</p>
+    <p align="center">Home Page</p>
 </div>
 <div style="display:inline-block;width:19%">
     <img src="screenshots/1_home.png">
-    <p>Home Page</p>
+    <p align="center">Home Page</p>
 </div>
 <div style="display:inline-block;width:19%">
     <img src="screenshots/1_home.png">
-    <p>Home Page</p>
+    <p align="center">Home Page</p>
 </div>
 
 
