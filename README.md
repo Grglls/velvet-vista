@@ -6,7 +6,7 @@ Visitors to the site may browse the items for sale without signing in.
 To add items to the cart, and checkout an order, users must sign-in with an account. Visitors can sign-up for an account using email and password.
 
 ## Screenshots:
-| ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) |
+<!-- | ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) |
 |:---:|:---:|:---:|
 | Home Page | Navbar - Visitors | Navbar - Users |
 
@@ -16,7 +16,14 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 
 | ![Checkout Page](screenshots/6_checkout.png) | ![Order Detail Page](screenshots/7_order_details.png) | ![Order History Page](screenshots/8_order_history.png) |
 |:---:|:---:|:---:|
-| Checkout | Order Details | Order History |
+| Checkout | Order Details | Order History | -->
+| ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) | ![Category Page](screenshots/3_category.png) | ![Item Detail Page](screenshots/4_item_detail.png) |
+|:---:|:---:|:---:|:---:|:---:|
+| Home Page | Navbar - Visitors | Navbar - Users | Category | Item Detail |
+
+| ![Cart Page](screenshots/5_cart.png) | ![Checkout Page](screenshots/6_checkout.png) | ![Order Detail Page](screenshots/7_order_details.png) | ![Order History Page](screenshots/8_order_history.png) | ![Search](screenshots/9_search.png) |
+|:---:|:---:|:---:|:---:|:---:|
+| Cart | Checkout | Order Details | Order History | Search |
 
 ## Technologies Used:
 * __Node.js__: to run the backend server.
