@@ -28,6 +28,13 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 
 <!-- <img src="screenshots/1_home.png" width="100"> -->
 <img src="screenshots/1_home.png" width="19%">&nbsp;<img src="screenshots/1_home.png" width="19%">&nbsp;<img src="screenshots/1_home.png" width="19%">&nbsp;<img src="screenshots/1_home.png" width="19%">&nbsp;<img src="screenshots/1_home.png" width="19%">
+----------------------------------------------------------------
+|:---:|:---:|:---:|:---:|:---:|
+| Home&nbsp;Page | Navbar&nbsp;-&nbsp;Visitors | Navbar&nbsp;-&nbsp;Users | Category&nbsp;Page | Item&nbsp;Detail&nbsp;Page |
+----------------------------------------------------------------
+|:---:|:---:|:---:|:---:|:---:|
+| Home Page | Navbar - Visitors | Navbar - Users | Category Page | Item Detail Page |
+
 <div style="display:inline-block;width:19%" class="test-class">
     <img src="screenshots/1_home.png">
     <p align="center">Home Page</p>
