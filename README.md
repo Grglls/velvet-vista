@@ -71,21 +71,28 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 <table width="100%">
   <thead>
     <tr>
-      <th width="20%">First header</th>
-      <th width="20%">Second header long</th>
-      <th width="20%">Third header</th>
-      <th width="20%">Fourth header long</th>
-      <th width="20%">Fifth header</th>
+      <th width="20%">Cart Page</th>
+      <th width="20%">Checkout Page</th>
+      <th width="20%">Order Detail Page</th>
+      <th width="20%">Order History Page</th>
+      <th width="20%">Search Page</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
-      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
-      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
-      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
-      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
+      <td width="20%"><img src="screenshots/5_cart.png"/></td>
+      <td width="20%"><img src="screenshots/6_checkout.png"/></td>
+      <td width="20%"><img src="screenshots/7_order_details.png"/></td>
+      <td width="20%"><img src="screenshots/8_order_history.png"/></td>
+      <td width="20%"><img src="screenshots/9_search.png"/></td>
     </tr>
+    <!-- <tr>
+      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
+      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
+      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
+      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
+      <td width="20%"><img src="https://docs.github.com/assets/cb-194149/images/help/images/view.png"/></td>
+    </tr> -->
   </tbody>
 </table>
 
