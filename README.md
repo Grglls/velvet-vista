@@ -6,17 +6,47 @@ Visitors to the site may browse the items for sale without signing in.
 To add items to the cart, and checkout an order, users must sign-in with an account. Visitors can sign-up for an account using email and password.
 
 ## Screenshots:
-| ![Home Page](screenshots/1_home.png) | ![Navbar - Visitors](screenshots/2_nav_visitor.png) | ![Navbar - Users](screenshots/2_nav_user.png) |
-|:---:|:---:|:---:|
-| Home Page | Navbar - Visitors | Navbar - Users |
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="20%"><img src="screenshots/1_home.png"/></th>
+      <th width="20%"><img src="screenshots/2_nav_user.png"/></th>
+      <th width="20%"><img src="screenshots/2_nav_visitor.png"/></th>
+      <th width="20%"><img src="screenshots/3_category.png"/></th>
+      <th width="20%"><img src="screenshots/4_item_detail.png"/></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="20%" align="center">Home Page</td>
+      <td width="20%" align="center">Navbar - Users</td>
+      <td width="20%" align="center">Navbar - Visitors</td>
+      <td width="20%" align="center">Category Page</td>
+      <td width="20%" align="center">Item Detail Page</td>
+    </tr>
+  </tbody>
+</table>
 
-| ![Category Page](screenshots/3_category.png) | ![Item Detail Page](screenshots/4_item_detail.png) | ![Cart Page](screenshots/5_cart.png) |
-|:---:|:---:|:---:|
-| Category | Item Detail | Cart |
-
-| ![Checkout Page](screenshots/6_checkout.png) | ![Order Detail Page](screenshots/7_order_details.png) | ![Order History Page](screenshots/8_order_history.png) |
-|:---:|:---:|:---:|
-| Checkout | Order Details | Order History |
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="20%"><img src="screenshots/5_cart.png"/></th>
+      <th width="20%"><img src="screenshots/6_checkout.png"/></th>
+      <th width="20%"><img src="screenshots/7_order_details.png"/></th>
+      <th width="20%"><img src="screenshots/8_order_history.png"/></th>
+      <th width="20%"><img src="screenshots/9_search.png"/></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="20%" align="center">Cart Page</td>
+      <td width="20%" align="center">Checkout Page</td>
+      <td width="20%" align="center">Order Detail Page</td>
+      <td width="20%" align="center">Order History Page</td>
+      <td width="20%" align="center">Search Page</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Technologies Used:
 * __Node.js__: to run the backend server.
