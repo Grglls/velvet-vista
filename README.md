@@ -65,7 +65,7 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
 
 The project was planned out in a Trello board, view it on Trello [here.](https://trello.com/b/jf9ay66D/velvet-vista-project-planning)
 
-The Entity Relationship Diagram (ERD) was made using Lucid Chart and can be seen in the Trello board.
+The Entity Relationship Diagram (ERD) was made using [Lucid Chart](https://www.lucidchart.com) and can be seen in the Trello board.
 
 Wireframes of the different pages were made using [wireframe|cc](https://wireframe.cc/) and can be seen in the Trello board.
 
