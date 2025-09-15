@@ -10,8 +10,8 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
   <thead>
     <tr>
       <th width="20%"><img src="screenshots/1_home.png"/></th>
-      <th width="20%"><img src="screenshots/2_nav_user.png"/></th>
       <th width="20%"><img src="screenshots/2_nav_visitor.png"/></th>
+      <th width="20%"><img src="screenshots/2_nav_user.png"/></th>
       <th width="20%"><img src="screenshots/3_category.png"/></th>
       <th width="20%"><img src="screenshots/4_item_detail.png"/></th>
     </tr>
@@ -19,8 +19,8 @@ To add items to the cart, and checkout an order, users must sign-in with an acco
   <tbody>
     <tr>
       <td width="20%" align="center">Home Page</td>
-      <td width="20%" align="center">Navbar - Users</td>
       <td width="20%" align="center">Navbar - Visitors</td>
+      <td width="20%" align="center">Navbar - Users</td>
       <td width="20%" align="center">Category Page</td>
       <td width="20%" align="center">Item Detail Page</td>
     </tr>
