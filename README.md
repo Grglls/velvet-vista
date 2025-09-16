@@ -1,5 +1,5 @@
 # Velvet Vista
-This project is an eCommerce website for a clothing store.
+This project is a MERN-stack eCommerce website for a clothing store.
 
 Visitors to the site may browse the items for sale without signing in.
 
