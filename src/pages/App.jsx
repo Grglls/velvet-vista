@@ -54,8 +54,6 @@ export default function App() {
   }
   
   async function handleChangeQuantity(itemId, size, quantity) {
-    console.log('handleChangeQuantity', itemId, size, quantity);
-    
     const updatedCart = await ordersAPI.setItemQuantity(itemId, size, quantity);
     setCart(updatedCart);
   }

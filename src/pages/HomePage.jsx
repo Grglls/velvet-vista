@@ -1,7 +1,6 @@
 import CategoryPreview from "../components/CategoryPreview";
 
 export default function HomePage({ clothesItems, categories }) {
-  console.log(categories);
   const clothesCats = categories.map((cat, index) =>
     <CategoryPreview
       key={index}
