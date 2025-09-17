@@ -77,4 +77,4 @@ Wireframes of the different pages were made using [wireframe|cc](https://wirefra
 No known bugs at this time.
 
 ## Acknowledgements:
-The SVG of the favicon was created using [favicon.io](https://favicon.io/favicon-generator/).
+The favicon was created using [favicon.io](https://favicon.io/favicon-generator/).
